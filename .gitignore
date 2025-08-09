@@ -1,0 +1,13 @@
+# Virtual Environment folder
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Our local database folders
+db/
+db_*
+
+# Our secret API key file
+.env
