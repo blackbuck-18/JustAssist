@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sendBtn = document.getElementById('send-btn');
     const userInput = document.getElementById('user-input');
     const chatBox = document.getElementById('chat-box');
-    const backendUrl = 'https://justassist-backend.onrender.com/chat';
+    const backendUrl = 'https://justassist.onrender.com/chat';
 
-    const sendMessage = () => {
+    function sendMessage() {
         const text = userInput.value.trim();
         if (text === '') return;
 
@@ -18,24 +18,24 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             body: JSON.stringify({ text: text })
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data && data.response) {
-                displayMessage(data.response, 'bot-message');
-            } else {
-                throw new Error("Invalid response format from server");
-            }
-        })
-        .catch(error => {
-            console.error('Error connecting to the backend:', error);
-            displayMessage('Sorry, there was an error processing your request.', 'bot-message');
-        });
-    };
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data && data.response) {
+                    displayMessage(data.response, 'bot-message');
+                } else {
+                    throw new Error("Invalid response format from server");
+                }
+            })
+            .catch(error => {
+                console.error('Error connecting to the backend:', error);
+                displayMessage('Sorry, there was an error processing your request.', 'bot-message');
+            });
+    }
 
     const displayMessage = (text, className) => {
         const messageElement = document.createElement('div');
