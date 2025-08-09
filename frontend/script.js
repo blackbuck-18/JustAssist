@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sendBtn = document.getElementById('send-btn');
     const userInput = document.getElementById('user-input');
     const chatBox = document.getElementById('chat-box');
-    const backendUrl = 'http://127.0.0.1:8000/chat';
+    const backendUrl = 'https://justassist.onrender.com/';
 
     const sendMessage = () => {
         const text = userInput.value.trim();
