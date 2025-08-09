@@ -1,0 +1,224 @@
+/* --- General Styles --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    /* We only apply top padding to the body of the landing page */
+}
+
+/* --- LANDING PAGE STYLES --- */
+
+/* This rule applies only to the body of the landing page */
+body:has(.main-header) {
+    padding-top: 80px; 
+}
+
+.main-header {
+    background-color: #ffffff;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.main-header .logo {
+    height: 70px;
+}
+
+.header-title {
+    font-size: 45px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.chat-now-button {
+    background-color: #7B68EE;
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.chat-now-button:hover {
+    background-color: #6a5acd;
+}
+
+.hero-section {
+    background: linear-gradient(120deg, #D0BFFF 0%, #7B68EE 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    background-color: #ffffff;
+    color: #7B68EE;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.hero-button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.details-section {
+    padding: 40px 20px;
+}
+
+.info-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.info-container h2 {
+    color: #7B68EE;
+    border-bottom: 2px solid #E6E0FF;
+    padding-bottom: 10px;
+}
+
+.info-container h3 {
+    color: #333;
+    font-weight: 600;
+}
+
+.info-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.info-container li {
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+    padding: 12px;
+    border-radius: 5px;
+    border-left: 4px solid #7B68EE;
+}
+
+
+/* --- CHAT PAGE STYLES --- */
+
+/* This rule applies only to the body of the chat page */
+body:has(#chat-container) {
+    background: linear-gradient(120deg, #D0BFFF 0%, #7B68EE 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#chat-container {
+    width: 500px;
+    height: 90vh;
+    max-height: 800px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    background-color: #7B68EE;
+    color: white;
+    padding: 10px 20px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chat-logo {
+    height: 40px;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#chat-box {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #ffffff;
+}
+
+.message {
+    padding: 8px 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.bot-message {
+    background-color: #F0F0F8;
+    color: #333;
+    align-self: flex-start;
+}
+
+.user-message {
+    background-color: #333333;
+    color: white;
+    align-self: flex-end;
+}
+
+#input-container {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+#user-input {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 12px 18px;
+    font-size: 16px;
+    outline: none;
+}
+
+#send-btn {
+    background-color: #7B68EE;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
