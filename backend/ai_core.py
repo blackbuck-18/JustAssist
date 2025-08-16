@@ -9,7 +9,7 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_community.document_loaders import PyPDFLoader
 
 # Your actual API key needs to be pasted here
-API_KEY = "AIzaSyD8jmA6gEF8hSSetwtYnkP89x33eAULBz4"
+API_KEY = ""
 
 # --- Setup LLM and Embeddings ---
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", google_api_key=API_KEY, temperature=0.3)
