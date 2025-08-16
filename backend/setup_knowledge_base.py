@@ -6,7 +6,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 # --- IMPORTANT: The same key from your ai_core.py file ---
 # In a real app, this would be in a single .env file.
-API_KEY = "AIzaSyD8jmA6gEF8hSSetwtYnkP89x33eAULBz4"
+API_KEY = ""
 
 # The main folder containing all the domain-specific sub-folders
 KNOWLEDGE_BASE_DIR = "knowledge_base"
